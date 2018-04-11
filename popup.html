@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta name="twitter:widgets:csp" content="on">
+	<script src="popup.js"></script>
+	<!--  
+		<script src="twitter_api_loader.js"></script> 
+	-->
+	<link rel="stylesheet" type="text/css" href="popup.css">
+
+</head>
+
+
+
+<body>
+	
+	<div id="tweet_div" class = "section" >
+			
+		<div id="bird_div">
+			<img id="twitterlogo" src="icons/bird_big.png" alt="Twitter.com" width="32" height="32">
+		</div>
+
+		<textarea id="statusbox" placeholder="What's happening?">
+		</textarea>
+		
+		<div id="submit_tweet_div">
+			<button id="tweetbutton" class="button" width="50px" height="50px">Tweet</button>
+			<p 
+				id="characters_remaining" 
+				okcolor="#777" 
+				nogoodcolor="#c00">280</p>
+			
+		</div>
+
+	</div>	
+	
+	<div id="related_div" class = "section">
+		<h1>#Discover</h1>
+
+		<div id="search_target"></div>
+		<button id="search_button" class="button">Related Tweets</button>
+		<button id="search_follows_button" class="button">Tweets from Followed Accounts</button>
+		
+	</div>
+
+	<div id="mention_div" class = 'section'>
+		<h1>@Mention</h1>
+		
+		<!-- <button class="button" id="link_button">&ltInclude Link in your Tweet&gt</button> -->
+		<button class="button" id="link_button">Share this Page</button>
+		<div id="mention_users" class="subsection"></div>
+		<div id="mention_hashtags" class="subsection"></div>
+		
+	</div>
+
+	<!--
+		<div id="timeline_test_div" class = 'section'>
+			<a class="twitter-timeline"
+			href="https://twitter.com/pdx">
+			Tweets by @pdx
+			</a>
+		</div>
+	-->
+
+</body>
+</html>
+
+
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
+			

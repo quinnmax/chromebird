@@ -1,0 +1,193 @@
+
+
+
+html{
+    font-family:arial;
+    font-size:12px;	
+    background:white;
+}
+
+h1{
+	color:#777;
+	font-size:12px;
+	margin:5px;
+	margin-bottom:5px;
+	font-weight:400;
+}
+
+textarea{ 
+	border-color:#ccc; 
+	/* dear rounding errors: hate */
+	margin-left:-1px;
+}
+
+*:focus{
+	outline:none;	
+	border: 1px solid #2b7bb9;
+}
+*:focus:hover{
+	box-shadow:0 0 5px #55acee;
+	border: 1px solid #2b7bb9;
+}
+
+
+
+button{ 
+	height:24px; 
+	text-align:left;
+	/*width:32%;*/
+	
+	margin:3px 0px;
+	margin-right:2px;
+	padding:4px 4px;
+	
+	border:1px solid transparent;
+	border-radius:4px;
+	background:white;
+	color: #2b7bb9;
+	cursor:pointer;
+}
+button:hover{
+	border:1px solid lightgray;
+}
+
+.button_text{ }
+
+.info_icon{
+	height:12px;
+	margin-left:3px;
+	margin-top:-1px;
+	border:1px solid transparent;
+	border-radius:100px;
+	
+	color:transparent;
+	font-weight:bold;
+	float:right; 
+}
+.info_icon:hover{
+	color:#2b7bb9;
+	font-weight:1000;
+	border:1px solid lightgray;
+}
+
+
+
+
+
+.section{ 
+	margin:10px;
+	padding:10px;
+	width:468px; 
+	background:white;
+
+	border-radius:4px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,.3); 
+	border-top: 1px solid lightgray;
+}
+
+.subsection{
+	border-top:1px solid lightgray;
+	padding-top:5px;
+	margin-top:8px;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	/*take this! stupid rounding errors*/
+	margin-bottom:-1px; 
+}
+
+
+
+
+#tweet_div{}
+
+	#search_follows_button{
+		/*float:right;*/
+	}
+
+	#bird_div{ 
+		float:left; 
+		margin-right:10px; 
+		margin-top:0px;
+		
+		padding-top:8px; 
+		padding-bottom:4px; 
+		padding-left:7px;
+		padding-right:5px;
+		
+		border: 1px solid transparent; 
+		border-radius:200px;
+		cursor:pointer;
+	}
+	#bird_div:hover{ 
+		border-color:lightgray;
+	}
+	
+	#statusbox{
+		height:100px;
+		width:400px;
+		display:inline-block; 
+		resize:vertical; 
+		padding:5px; 
+		max-height:510px; 
+		border-radius:0px;
+	}
+
+	#submit_tweet_div{ 
+		height:30px; 
+		margin-top:4px;
+		margin-right:0;
+	}
+	
+	#characters_remaining{
+		float:right;
+		text-align:center;
+		margin-top:8px;
+		width:48px;
+		font-weight:400;
+	}
+	
+	#tweetbutton{ 
+		float:right; 
+		width:55px;
+		margin-right:0;
+		background:#55acee;
+		color:white;
+		text-align:center;
+		cursor:initial;
+		border-width:1px;
+		border-color:transparent;
+	}
+	#tweetbutton:focus{border-color:#2b7bb9;}
+	#tweetbutton:hover:enabled{ border-color:#2b7bb9; }
+	#tweetbutton:disabled{ background:lightgray; }
+
+#mention_div{ 
+	max-height:300px; 
+	overflow:scroll; 
+}
+	#link_button{ }
+
+#related_div{ 
+	max-height:200px; 
+	overflow:scroll; 
+}
+	#search_target{ 
+		font-weight:600; 
+		margin:15px 7px; 
+		margin-bottom:6px;
+		padding:0px;
+	}
+
+#expando_button{
+	position:absolute;
+	left:10px;
+	top:10px;
+	background:white;
+}
+
+
+
+
+
+
