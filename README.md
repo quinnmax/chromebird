@@ -1,23 +1,31 @@
 
 # Chromebird
 
-Chromebird is an extension for Google Chrome that gathers Twitter-related content from the current web page and makes it easy to tweet or find tweets and accounts related to the current page. 
+![Chromebird](icons/twextension.png )
 
-I often found myself more interested in what people had to say on Twitter than what's being said in the comments section of an article. This tool makes it easy to find what people have tweeted, to track down authors that might be linked in some hard-to-find Twitter button on a page, or to share a link with a quote and some proper attribution.
+Chromebird is an extension for Google Chrome that searches the active web page, finds related tweets and accounts, and makes it easy to share links.
+
+I made Chromebird because I often found myself more interested in what people had to say on Twitter than what's being said in the comments section of an article. This tool makes it easy to find what people have tweeted, to track down authors that might be linked in some hard-to-find Twitter button on a page, or to share.
 
 It was also nice to learn a bit about making Chrome extensions and to try out writing javascript, html, and css (none of which I had much experience with).
 
-It uses Twitter Web Intents (https://dev.twitter.com/web/intents) to do the actual tweeting, so doesn't need any special permissions related to your Twitter account (and actually works just fine if you are logged out or don't have a Twitter account).
+It uses Twitter Web Intents (https://dev.twitter.com/web/intents) to do the actual tweeting and searching, so no special permissions related to your Twitter account are required (and actually works just fine if you are logged out of Twitter or don't have an account).
 
 # Installation
 
-To install an unpacked extension in Chrome, go to chrome://extensions/ in your browser and click "Load Unpacked" just below the extensions search bar. Then select the directory to which you've downloaded the contents of the extension. 
+To install a packed extension (.crx file), go to `chrome://extensions/` in your browser and drag the extension file into the Chrome window.
+
+To install an unpacked extension in Chrome, go to `chrome://extensions/` in your browser. Turn on "Developer mode" in the upper right. Then, click "Load Unpacked" (found just below the extensions search bar). Select the directory to which you've downloaded the contents of the extension and you should be good to go. You can turn off developer mode and the unpacked extension will remain.
+
+# Permissions
+
+Chromebird needs scary looking permissions (specifically "Read and change all your data on the websites you visit"), but it really doesn't do anything fancy. It reads what's on the page so it can search for Twitter handles and copy highlighted text. This never gets sent anywhere. The only sending that's done is when you search Twitter (which sends your current URL to Twitter as the search query) or when you use the tweet box (which sends the content of the Chromebird tweet box to Twitter).
 
 # Use
 
 Chromebird has a few functionalities so I broke its layout into subsections.
 
-### Tweet box
+### Tweet
 
 The tweet section makes it easy compose a tweet in your browser from any page. You can easily add quoted text, a link, and attribution.
 

@@ -7,18 +7,34 @@ var cur_url;
 function handle_from_url( input_url ){
 
 	var handle;
-	if( input_url.indexOf("www.twitter.com/") != -1 ){
-		var substring_index = input_url.indexOf("www.twitter.com/");
-		handle = input_url.substring(substring_index+16);
+
+	if( input_url.indexOf("//twitter.com/#!/") != -1 ){
+		var substring_index = input_url.indexOf("twitter.com/#!/");
+		handle = input_url.substring(substring_index+15);
 	}else if( input_url.indexOf("//twitter.com/") != -1 ){
 		var substring_index = input_url.indexOf("twitter.com/");
 		handle = input_url.substring(substring_index+12);
+
+	}else if( input_url.indexOf("www.twitter.com/#!/") != -1 ){
+		var substring_index = input_url.indexOf("twitter.com/#!/");
+		handle = input_url.substring(substring_index+15);
+	}else if( input_url.indexOf("www.twitter.com/") != -1 ){
+		var substring_index = input_url.indexOf("twitter.com/");
+		handle = input_url.substring(substring_index+12);
+
+	}else if( input_url.indexOf("mobile.twitter.com/#!/") != -1 ){
+		var substring_index = input_url.indexOf("twitter.com/#!/");
+		handle = input_url.substring(substring_index+15);
+	}else if( input_url.indexOf("mobile.twitter.com/") != -1 ){
+		var substring_index = input_url.indexOf("twitter.com/");
+		handle = input_url.substring(substring_index+12);
+
 	}else if( input_url.indexOf('/search?q=') != -1 ){
 		handle = input_url.substring(1);
+	
 	}else{
 		return;
 	}
-
 
 	// intercept hashtags
 	if(handle.substring(0,7) == 'hashtag'){
@@ -47,23 +63,24 @@ function handle_from_url( input_url ){
 	var index_of_quest = handle.indexOf("?");
 	if (index_of_quest != -1){ handle = handle.substring(0,index_of_quest); }
 	
-	if( handle.length <= 0   ||
-		handle == '#!'       ||
-		handle == 'about'	 ||
-		handle == 'goodies'	 ||
-		handle == 'hashtag'  ||
-		handle == 'home'     ||
-		handle == 'i'		 ||
-		handle == 'intent'   ||
-		handle == 'jobs' 	 ||
-		handle == 'login'    ||
-		handle == 'logout'   ||
-		handle == 'privacy'  ||
-		handle == 'search'   ||
-		handle == 'settings' ||
-		handle == 'share'    ||
-		handle == 'signup'   ||
-		handle == 'tos'      ||
+	if( handle.length <= 0		||
+		handle == '#!'			||
+		handle == 'about'		||
+		handle == 'goodies'		||
+		handle == 'hashtag'		||
+		handle == 'home'		||
+		handle == 'i'			||
+		handle == 'intent'		||
+		handle == 'jobs'		||
+		handle == 'login'		||
+		handle == 'logout'		||
+		handle == 'privacy'		||
+		handle == 'search'		||
+		handle == 'search-home'	||
+		handle == 'settings'	||
+		handle == 'share'		||
+		handle == 'signup'		||
+		handle == 'tos'			||
 		handle.indexOf('+') == 0){
 			return
 	}else{
